@@ -32,7 +32,7 @@ public class OperHibernate {
         while (opcion !=0){
         
         try{
-            System.out.print("Elige una opcion:\n1.-Listar Personas" + 
+            System.out.println("Elige una opcion:\n1.-Listar Personas" + 
           "\n2.-Buscar persona por Id\n" +
                     "3.-Agregar a una persona\n" +
                     "4.-Modificar una persona\n"+
@@ -132,7 +132,7 @@ public class OperHibernate {
                     persona.eliminar(p1);
                     break;
                 case 0:
-                    System.out.println("Salida");
+                    System.out.println("Salida efectuada");
                     System.exit(0);
                     break;
                     
