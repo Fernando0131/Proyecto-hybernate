@@ -27,8 +27,7 @@ public class OperHibernate {
         int opcion = -1;
         Scanner entrada = new Scanner(System.in);
         String id, nombres, apellidos, direccion, email, dui, tip_sangre;
-        
-        
+  
         while (opcion !=0){
         
         try{
@@ -38,7 +37,7 @@ public class OperHibernate {
                     "4.-Modificar una persona\n"+
                     "5.-Eliminar una persona\n" +
                     "0.-Salir\n");
-        
+
             opcion = Integer.parseInt(entrada.nextLine());
             
             switch (opcion){
