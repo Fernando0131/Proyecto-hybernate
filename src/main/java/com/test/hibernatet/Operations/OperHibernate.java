@@ -37,7 +37,7 @@ public class OperHibernate {
                     "3.-Agregar a una persona\n" +
                     "4.-Modificar una persona\n"+
                     "5.-Eliminar una persona\n" +
-                    "0.-Salir");
+                    "0.-Salir\n");
         
             opcion = Integer.parseInt(entrada.nextLine());
             
