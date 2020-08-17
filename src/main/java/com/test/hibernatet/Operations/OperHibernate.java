@@ -132,7 +132,8 @@ public class OperHibernate {
                     persona.eliminar(p1);
                     break;
                 case 0:
-                    System.out.println("Opcion no contemplada");
+                    System.out.println("Salida");
+                    System.exit(0);
                     break;
                     
             
