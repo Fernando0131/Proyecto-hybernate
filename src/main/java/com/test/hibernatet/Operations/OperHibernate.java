@@ -64,7 +64,7 @@ public class OperHibernate {
                     System.out.println("Introduce los apellidos de la persona a agregar");
                     apellidos = entrada.nextLine();
                     
-                    System.out.print("Introduce la direccion de la persona a agregar");
+                    System.out.println("Introduce la direccion de la persona a agregar");
                     direccion = entrada.nextLine();
                     
                     System.out.println("Introduce el correo");
