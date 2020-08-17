@@ -6,7 +6,6 @@
 package com.test.hibernatet.Dao;
 
 import com.test.hibernatet.modelo.Persona;
-import java.util.Iterator;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -111,7 +110,7 @@ public class personaDao {
     public void eliminar (Persona persona){
     try{
         em = getEntityManager();
-        em.getTransaction();
+        em.getTransaction().begin();
         em.remove(em.merge(persona));
         em.getTransaction().commit();
    
