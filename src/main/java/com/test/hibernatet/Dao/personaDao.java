@@ -67,6 +67,7 @@ public class personaDao {
             em.getTransaction().begin();
             em.persist(persona);
             em.getTransaction().commit();
+            
 
         }catch (Exception ex){
         
@@ -113,6 +114,7 @@ public class personaDao {
         em.getTransaction().begin();
         em.remove(em.merge(persona));
         em.getTransaction().commit();
+
    
     
     }catch (Exception ex){
