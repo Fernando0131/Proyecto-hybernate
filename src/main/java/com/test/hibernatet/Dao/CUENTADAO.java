@@ -4,36 +4,29 @@
  * and open the template in the editor.
  */
 package com.test.hibernatet.Dao;
-
-import com.test.hibernatet.modelo.Persona;
+import com.test.hibernatet.modelo.CUENTA;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-
-
 /**
  *
- * @author GERSON
+ * @author FERNANDO
  */
-
-
-public class personaDao {
-    
-    protected EntityManager em;
+public class CUENTADAO {
+      protected EntityManager em;
     private EntityManagerFactory tran = null;
     
-    
-    public personaDao (){
+     public CUENTADAO (){
     
         tran = Persistence.createEntityManagerFactory("HibernatePU");
     
     }
     
-    public Persona fyndbyId(Persona p){
+    public CUENTA fyndbyId(CUENTA p){
         em = getEntityManager();
-        return em.find(Persona.class, p.getCodigo());
+        return em.find(CUENTA.class, p.getCodigo());
     }
     
     
@@ -47,11 +40,11 @@ public class personaDao {
     public void selectall(){
     
     //Iniciamos variable que contiene la sentencia a ejecutar
-        String hql = "SELECT p from Persona p";
+        String hql = "SELECT p from CUENTA p";
         em = getEntityManager();
         Query query = em.createQuery(hql);
-        List<Persona> lista = query.getResultList();
-        for (Persona p : lista){
+        List<CUENTA> lista = query.getResultList();
+        for (CUENTA p : lista){
         System.out.print(p + "\n");
         }
         
@@ -60,12 +53,12 @@ public class personaDao {
     
     
     
-    public void Insertar (Persona persona){
+    public void Insertar (CUENTA cuenta){
     
         try{
             em = getEntityManager();
             em.getTransaction().begin();
-            em.persist(persona);
+            em.persist(cuenta);
             em.getTransaction().commit();
             
 
@@ -84,11 +77,11 @@ public class personaDao {
     }
 
         
-     public void actualizar (Persona persona){
+     public void actualizar (CUENTA cuenta){
      try{
          em = getEntityManager();
          em.getTransaction().begin();
-         em.merge(persona);
+         em.merge(cuenta);
          em.getTransaction().commit();
          
      
@@ -108,11 +101,11 @@ public class personaDao {
      }
     
     
-    public void eliminar (Persona persona){
+    public void eliminar (CUENTA cuenta){
     try{
         em = getEntityManager();
         em.getTransaction().begin();
-        em.remove(em.merge(persona));
+        em.remove(em.merge(cuenta));
         em.getTransaction().commit();
 
    
@@ -131,6 +124,7 @@ public class personaDao {
         }
     
     }
-    
+
+  
     
 }
